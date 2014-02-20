@@ -1,0 +1,87 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BLOCK_SIZE	mydisk.h	/^const int BLOCK_SIZE;$/;"	v
+BLOCK_SIZE	test.c	/^const int BLOCK_SIZE = 5;$/;"	v
+CACHE_READ_LATENCY	mycache.h	/^const int CACHE_READ_LATENCY;$/;"	v
+CACHE_READ_LATENCY	test.c	/^const int CACHE_READ_LATENCY = 10;$/;"	v
+CACHE_SIZE	mycache.h	/^const int CACHE_SIZE;$/;"	v
+CACHE_SIZE	test.c	/^const int CACHE_SIZE = 5;$/;"	v
+CACHE_SWITCH	mycache.h	/^int CACHE_SWITCH;$/;"	v
+CACHE_SWITCH	test.c	/^int CACHE_SWITCH = 0;$/;"	v
+CACHE_WRITE_LATENCY	mycache.h	/^const int CACHE_WRITE_LATENCY;$/;"	v
+CACHE_WRITE_LATENCY	test.c	/^const int CACHE_WRITE_LATENCY = 10;$/;"	v
+CC	Makefile	/^CC=gcc$/;"	m
+CC_FLAGS	Makefile	/^CC_FLAGS= -g -O3 $/;"	m
+Disk_Latency	mydisk.c	/^int Disk_Latency = 0;$/;"	v
+HDD_READ_LATENCY	mydisk.h	/^const int HDD_READ_LATENCY;$/;"	v
+HDD_READ_LATENCY	test.c	/^const int HDD_READ_LATENCY = 100;$/;"	v
+HDD_SEEK	mydisk.h	/^const int HDD_SEEK;$/;"	v
+HDD_SEEK	test.c	/^const int HDD_SEEK = 20;$/;"	v
+HDD_WRITE_LATENCY	mydisk.h	/^const int HDD_WRITE_LATENCY;$/;"	v
+HDD_WRITE_LATENCY	test.c	/^const int HDD_WRITE_LATENCY = 120;$/;"	v
+LD	Makefile	/^LD=gcc$/;"	m
+LDFLAGS	Makefile	/^LDFLAGS=$/;"	m
+MYCACHE_H	mycache.h	/^#define MYCACHE_H$/;"	d
+MYDISK_H	mydisk.h	/^#define MYDISK_H$/;"	d
+MYSTACK_H	myqueue.h	/^#define MYSTACK_H$/;"	d
+MyCache	mycache.h	/^}MyCache;$/;"	t	typeref:struct:_cache_
+MyDisk	mydisk.h	/^}MyDisk;$/;"	t	typeref:struct:_my_disk
+MyQueue	myqueue.h	/^}MyQueue;$/;"	t	typeref:struct:_queue_
+OBJECTS	Makefile	/^OBJECTS=mydisk.o myqueue.o mycache.o test.o$/;"	m
+QueueElement	myqueue.h	/^}QueueElement;$/;"	t	typeref:struct:_queue_ele_
+SSD_READ_LATENCY	mydisk.h	/^const int SSD_READ_LATENCY;$/;"	v
+SSD_READ_LATENCY	test.c	/^const int SSD_READ_LATENCY = 100;$/;"	v
+SSD_WRITE_LATENCY	mydisk.h	/^const int SSD_WRITE_LATENCY;$/;"	v
+SSD_WRITE_LATENCY	test.c	/^const int SSD_WRITE_LATENCY = 100;$/;"	v
+_cache_	mycache.h	/^typedef struct _cache_$/;"	s
+_my_disk	mydisk.h	/^typedef struct _my_disk$/;"	s
+_queue_	myqueue.h	/^typedef struct _queue_$/;"	s
+_queue_ele_	myqueue.h	/^typedef struct _queue_ele_$/;"	s
+add_cache_entry	mycache.c	/^int add_cache_entry(int v, char *block_buffer)$/;"	f
+blkidx	myqueue.h	/^	int blkidx;\/\/block's index$/;"	m	struct:_queue_ele_
+block_referred	mycache.c	/^void block_referred(QueueElement *block)$/;"	f
+blockqueue	mycache.h	/^	MyQueue* blockqueue;\/\/the queue to store blocks$/;"	m	struct:_cache_
+cacheEntity	mydisk.c	/^MyCache cacheEntity = {NULL, 0, 0};$/;"	v
+clean_queue	myqueue.c	/^void clean_queue(MyQueue* myqueue)$/;"	f
+close_cache	mycache.c	/^void close_cache()$/;"	f
+close_disk	mydisk.c	/^void close_disk()$/;"	f
+contains_in_queue	myqueue.c	/^QueueElement* contains_in_queue(int v, MyQueue* myqueue)$/;"	f
+content	myqueue.h	/^	char *content;\/\/the data of the block$/;"	m	struct:_queue_ele_
+dirtyflag	myqueue.h	/^	int dirtyflag;\/\/0 - clean, 1 - dirty$/;"	m	struct:_queue_ele_
+diskEntity	mydisk.c	/^MyDisk diskEntity = {NULL, 0, -1};$/;"	v
+disk_type	mydisk.h	/^	int disk_type;\/\/0-HDD, 1-SSD, -1-uninitialized$/;"	m	struct:_my_disk
+dumpQueue	myqueue.c	/^void dumpQueue(MyQueue* myqueue)$/;"	f
+head	myqueue.h	/^	QueueElement *head;$/;"	m	struct:_queue_
+hitCount	mycache.h	/^	int hitCount;\/\/counter of cache-hit$/;"	m	struct:_cache_
+init_cache	mycache.c	/^int init_cache(int nblocks)$/;"	f
+init_disk	mydisk.c	/^int init_disk(char const *file_name, size_t max_blocks, int disk_type)$/;"	f
+init_queue	myqueue.c	/^int init_queue(int queue_capacity, MyQueue* myqueue)$/;"	f
+main	test.c	/^int main(int argc, char **argv)$/;"	f
+mark_as_dirty	mycache.c	/^void mark_as_dirty(int blkIdx)$/;"	f
+max_blocks	mydisk.h	/^	int max_blocks;\/\/maximum allowed blocks$/;"	m	struct:_my_disk
+max_queue_size	myqueue.h	/^	int max_queue_size;$/;"	m	struct:_queue_
+mydisk_read	mydisk.c	/^int mydisk_read(int start_address, int nbytes, void *buffer)$/;"	f
+mydisk_write	mydisk.c	/^int mydisk_write(int start_address, int nbytes, void *buffer)$/;"	f
+next	myqueue.h	/^	struct _queue_ele_ *next;$/;"	m	struct:_queue_ele_	typeref:struct:_queue_ele_::_queue_ele_
+pBlockStore	mydisk.h	/^	FILE *pBlockStore;\/\/the file to store the data blocks$/;"	m	struct:_my_disk
+pop	myqueue.c	/^QueueElement* pop(MyQueue* myqueue)$/;"	f
+prev	myqueue.h	/^	struct _queue_ele_ *prev;$/;"	m	struct:_queue_ele_	typeref:struct:_queue_ele_::_queue_ele_
+push	myqueue.c	/^int push(QueueElement* newblock, MyQueue* myqueue)$/;"	f
+queue_len	myqueue.h	/^	int queue_len;$/;"	m	struct:_queue_
+readLatency	mydisk.c	/^int readLatency = 0;$/;"	v
+read_cache	mycache.c	/^char* read_cache(int v)$/;"	f
+tail	myqueue.h	/^	QueueElement *tail;$/;"	m	struct:_queue_
+test_case_1	test.c	/^int test_case_1()$/;"	f
+test_case_2	test.c	/^int test_case_2()$/;"	f
+test_case_3	test.c	/^int test_case_3()$/;"	f
+test_case_4	test.c	/^int test_case_4()$/;"	f
+test_case_5	test.c	/^int test_case_5()$/;"	f
+test_case_6	test.c	/^int test_case_6()$/;"	f
+test_case_7	test.c	/^int test_case_7()$/;"	f
+test_latency_value	test.c	/^int test_latency_value(int nDiskSeek, int nBlockWrite, int nBlockRead, int nCacheWrite, int nCacheRead)$/;"	f
+totalCount	mycache.h	/^	int totalCount;\/\/counter of total cache reference$/;"	m	struct:_cache_
+writeLatency	mydisk.c	/^int writeLatency = 0;$/;"	v
